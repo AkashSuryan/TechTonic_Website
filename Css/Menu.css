@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-container{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.navbar {
+    background-color: black;
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.navbar-nav{
+    gap:20%;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .dropdown-item:hover {
+    background-color: #333;
+}
+
+.dropdown-menu {
+    background-color: black;
+    display: none; /* Hide the dropdown menu by default */
+}
+
+.dropdown-item {
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: none; /* On mobile, dropdown menus should open on click, not hover */
+    }
+}
