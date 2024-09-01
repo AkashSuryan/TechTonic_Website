@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../main/bkg.webp');
+    background-size: 35% auto; /* Resize the background image */
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative; /* Ensure positioning for .zoom-effect */
+}
+
+.zoom-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-repeat: inherit;
+    background-position: inherit;
+    animation: zoomAnimation 10s infinite alternate;
+}
+
+@keyframes zoomAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05); /* Adjust scale if needed */
+    }
+}
+
+.container {
+    position: relative; /* Ensures the container content is on top of the background */
+    z-index: 1; /* Places the content above the zooming background */
+    width: 50%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff36; /* Semi-transparent white */
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    height: 350px;
+}
+
+.image-container {
+    position: absolute;
+    top: 20px; /* Adjust the top position */
+    right: 20px; /* Adjust the right position */
+    z-index: 2; /* Ensures the image is above the zoom effect */
+    text-align: center; /* Centers the image horizontally */
+}
+
+.image-section {
+    width: 200px; /* Adjust to your desired width */
+    height: 80px;
+    margin-right: 780px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+}
+
+.info-link {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.info-icon {
+    width: 24px; /* Adjust to your desired width */
+    height: 24px; /* Adjust to your desired height */
+    margin-right: 10px; /* Space between the icon and the text */
+}
+
+.info-link:hover {
+    text-decoration: underline;
+}
+
+.address {
+    margin-top: 40px;
+    font-size: 16px;
+    text-align: left;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        /*background-image: url('../main/bkg.webp');*/
+        background-size: cover; /* Ensure the background image covers the entire screen */
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative; /* Ensure positioning for .zoom-effect */
+    }
+
+    .zoom-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: inherit;
+        background-size: inherit;
+        background-repeat: inherit;
+        background-position: inherit;
+        animation: zoomAnimation 10s infinite alternate;
+    }
+
+    @keyframes zoomAnimation {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.05); /* Adjust scale if needed */
+        }
+    }
+
+    .container {
+    position: relative;
+    z-index: 1; /* Places the content above the zooming background */
+    width: 80%; /* Adjust width to fit more screen space on mobile */
+    max-width: 400px; /* Maintain maximum width */
+    padding: 20px;
+    background-color: #ffffff3b;; /* Semi-transparent white */
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    height: 300px; /* Allow height to adjust based on content */
+    margin: 0; /* Remove margin to use full width */
+    display: flex; /* Center the content */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; 
+    margin-left: -100px;
+}
+
+    .image-container {
+        position: static; 
+        margin-bottom: 20px; /* Add space below the image */
+        text-align: left; 
+        margin-top: -500px;
+    }
+
+    .image-section {
+        width: 200px; /* Adjust width for mobile devices */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center the image */
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 2em; /* Adjust font size for mobile */
+    }
+
+    .info-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Center-align items for mobile */
+    }
+
+    .info-link {
+        display: flex;
+        align-items: center;
+        margin: 15px 0; /* Adjust margin for better spacing on mobile */
+        color: white;
+        text-decoration: none;
+        font-size: 18px; /* Adjust font size for mobile */
+    }
+
+    .info-icon {
+        width: 20px; /* Adjust icon size for mobile */
+        height: 20px; /* Adjust icon size for mobile */
+        margin-right: 10px; /* Space between the icon and the text */
+    }
+
+    .info-link:hover {
+        text-decoration: underline;
+    }
+
+    .address {
+        margin-top: 40px;
+        font-size: 14px; /* Adjust font size for better readability on mobile */
+        text-align: left;
+    }
+            
+        }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        /*background-image: url('https://images.pexels.com/photos/1257860/pexels-photo-1257860.jpeg');*/
+        background-size: cover; /* Ensure the background image covers the entire screen */
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative; /* Ensure positioning for .zoom-effect */
+    }
+
+    .zoom-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: inherit;
+        background-size: inherit;
+        background-repeat: inherit;
+        background-position: inherit;
+        animation: zoomAnimation 10s infinite alternate;
+    }
+
+    @keyframes zoomAnimation {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.05); /* Adjust scale if needed */
+        }
+    }
+
+    .container {
+    position: relative;
+    z-index: 1; /* Places the content above the zooming background */
+    width: 65%; /* Adjust width to fit more screen space on mobile */
+    max-width: 400px; /* Maintain maximum width */
+    padding: 20px;
+    background-color: #ffffff24; /* Semi-transparent white */
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    height: 320px; /* Allow height to adjust based on content */
+    margin: 0; /* Remove margin to use full width */
+    display: flex; /* Center the content */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; 
+    margin-left: -168px;
+    /* margin-top: 30px; */
+}
+
+    .image-container {
+        position: static; 
+        margin-bottom: 20px; /* Add space below the image */
+        text-align: left; 
+        margin-top: -600px;
+    }
+
+    .image-section {
+        width: 200px; /* Adjust width for mobile devices */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center the image */
+        margin-left: -30px;
+        margin-top: -25px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 2em; /* Adjust font size for mobile */
+    }
+
+    .info-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        margin-top: -5px;
+        font-size: 20px;
+    }
+
+    .info-link {
+        display: flex;
+        align-items: center;
+        margin: 19px 0; /* Adjust margin for better spacing on mobile */
+        color: white;
+        text-decoration: none;
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .info-icon {
+        width: 25px; /* Adjust icon size for mobile */
+        height: 25px; /* Adjust icon size for mobile */
+        margin-right: 10px; /* Space between the icon and the text */
+    }
+
+    .info-link:hover {
+        text-decoration: underline;
+    }
+
+    .address {
+        margin-top: 45px;
+        font-size: 14px; /* Adjust font size for better readability on mobile */
+        text-align: left;
+    }
+}
